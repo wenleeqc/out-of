@@ -1,0 +1,125 @@
+:root {
+    --dark-theme-background: #111C2F;
+    --dark-theme-foreground: #f5f5f5;
+
+    --aceent-color-1: #fef970;
+    --accent-color-2: #9decff;
+
+    --font: 'Montserrat', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+:before,
+:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    user-select: none;
+}
+
+body {
+    background-color: var(--dark-theme-background);
+    color: var(--dark-theme-foreground);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin-top: 80px;
+    padding: 1rem;
+}
+
+
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    overflow-x: hidden;
+}
+
+.list-item {
+    background-color: var(--aceent-color-1);
+    border-radius: 200px;
+    color: var(--dark-theme-background);
+    text-align: center;
+    padding: 5px 10px;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: filter 0.2s ease-in-out;
+}
+
+.list-item:hover {
+    filter: brightness(70%);
+}
+
+.checked {
+    filter: grayscale();
+    text-decoration: line-through;
+}
+
+.checked:hover {
+    filter: saturate(30%);
+}
+
+.input-field {
+    outline: none;
+    background-color: var(--accent-color-2);
+    border: none;
+    border-radius: 200px;
+    padding: 5px 20px;
+    color: var(--dark-theme-background);
+    font-family: var(--font);
+    font-size: 2rem;
+    width: 80%;
+}
+
+.input-field::placeholder {
+    font-size: 1rem;
+}
+
+.add-to-list-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 200px;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+}
+
+.add-to-list-btn:before,
+.add-to-list-btn:after {
+    content: "";
+    position: absolute;
+    border: 1px solid var(--dark-theme-background);
+    width: 20px;
+    transition: border 0.2s ease-in-out;
+}
+
+.add-to-list-btn:after {
+    transform: rotate(90deg);
+}
+
+.add-to-list-btn:hover:before,
+.add-to-list-btn:hover:after {
+    border-color: green;
+}
