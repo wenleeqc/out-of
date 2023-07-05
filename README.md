@@ -10,7 +10,7 @@ Out of is a shopping list app for roommates! A shared list lets everyone know wh
 ## Features:
 - Share and contribute with anyone
 - Add items to shopping list easily
-- Check off items on the list or complete delete them
+- Check off items on the list or just delete them
 - Uses firebase to keep track of list items
 - It's a progressive web app (PWA) so you can install app on mobile devices
 
