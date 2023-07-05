@@ -1,4 +1,4 @@
-# out-of
+# Out of
 <img src="out-of-screenshot-iphone.png" width=300 alt="Out of screenshot">
 
 ### One list to rule them all… 
